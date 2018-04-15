@@ -16,18 +16,21 @@ public class Garage {
 		voitures = new ArrayList<Vehicule>();
 	}
 	public String toString() {
-		String str = "****************************\n
-					  *  Garage OpenClassrooms   *\n
-					  ****************************\n"
+		String str = "****************************\n";
+			str += "*  Garage OpenClassrooms   *\n";
+				str += "****************************\n";
 		try {
 		ObjectInputStream ois = new ObjectInputStream(
 									new BufferedInputStream(
 										new FileInputStream(
 											new File("Garage.txt"))));
 		str += ((Vehicule)ois.readObject).toString();
-		}	
-	}
 		return str;
+		} catch (ClassNotFoundException e) {
+                e.printStackTrace();
+     		}	
+	}
+		
 	}
 	public void add(Vehicule voit) {
 		this.voitures.add(voit);

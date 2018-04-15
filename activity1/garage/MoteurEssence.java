@@ -1,7 +1,7 @@
 public class MoteurEssence extends Moteur {
 
-	public MoteurEssence() {
-		super(String cylindre, double prix);
+	public MoteurEssence(String cylindre, double prix) {
+		super(cylindre, prix);
 		super.type = TypeMoteur.ESSENCE;
 	}
 }

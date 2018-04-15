@@ -1,10 +1,8 @@
 public class Moteur {
-	private TypeMoteur type;
-	private String cylindre;
-	private double prix;
+	protected TypeMoteur type;
+	protected String cylindre;
+	protected double prix;
 
-	public Moteur() {
-	}
 	public Moteur(String cylindre, double prix) {
 		this.cylindre = cylindre;
 		this.prix = prix;
@@ -17,5 +15,6 @@ public class Moteur {
 	public double getPrix() {
 		return this.prix;
 	} 
+
 	
 }

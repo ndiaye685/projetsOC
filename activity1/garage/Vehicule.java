@@ -1,3 +1,5 @@
+import java.io.Serializable;
+import java.util.List;
 public abstract class Vehicule implements Serializable {
 	protected double prix;
 	protected String nom;
@@ -13,6 +15,9 @@ public abstract class Vehicule implements Serializable {
 	}
 	public List<Option> getOptions() {
 		return this.options;
+	}
+	public void setMoteur(Moteur moteur) {
+		this.moteur = moteur;
 	}
 
 	public void addOption(Option opt) {
