@@ -4,7 +4,6 @@ public class Moteur {
 	private double prix;
 
 	public Moteur() {
-
 	}
 	public Moteur(String cylindre, double prix) {
 		this.cylindre = cylindre;
@@ -12,11 +11,11 @@ public class Moteur {
 	}
 
 	public String toString() {
-
+		return "Moteur " + this.type + " " + this.cylindre + " (" + this.getPrix() + ")";
 	}
 
 	public double getPrix() {
-
+		return this.prix;
 	} 
 	
 }
