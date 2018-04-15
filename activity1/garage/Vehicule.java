@@ -1,12 +1,17 @@
 import java.io.Serializable;
 import java.util.List;
-public abstract class Vehicule implements Serializable {
+import java.util.ArrayList;
+public class Vehicule implements Serializable {
 	protected double prix;
 	protected String nom;
 	protected List<Option> options;
 	protected Marque nomMarque;
 	protected Moteur moteur;
 
+	public Vehicule() {
+		options = new ArrayList<Option>();
+
+	}
 	public double getPrix() {
 		return this.prix;
 	}
